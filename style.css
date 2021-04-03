@@ -1,0 +1,38 @@
+*, *::after, *::before { 
+    box-sizing: border-box;
+}
+
+body { 
+    padding: 2rem;
+    display: flex; 
+    justify-content: space-between;
+}
+
+main {
+    width: 720px; 
+}
+.commands_section { 
+    margin-left: 1rem;
+}
+.canvas { 
+    border: 2px solid black; 
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+
+.form { 
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.form__input { 
+    flex: 0 0 80%; 
+    font-size: inherit;
+}
+
+.form__button { 
+    flex: 0 0 15%; 
+    font-size: inherit;
+}
