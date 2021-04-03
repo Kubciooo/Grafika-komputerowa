@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script  src="app.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafika żółtwia</title>
+  </head>
+
+  <body>
+    <main>
+      <canvas class="canvas" height="720" width="720"></canvas>
+      <p class="canvas__pen">rysowanie jest włączone</p>
+      <p class="canvas__pos">X: 360, Y: 360</p>
+      <p class="canvas__angle">kąt: 90</p>
+      <div class="form">
+        <input type="text" class="form__input" /><button class="form__button">
+          Run
+        </button>
+      </div>
+    </main>
+    <section class="commands_section">
+      <h1 class="title">Prosty emulator grafiki żółwia.</h1>
+      <a href="zad1ex.html">Przykładowe programy</a>
+      <p class="description">
+        Startowa pozycja żółwia <code>[szerokość/2, wysokość/2]</code>.
+        <h3>Komendy</h3>
+        <ul>
+          <li><code>fd [liczba]</code> - idź do przodu o daną liczbę pixeli</li>
+          <li><code>bk [liczba]</code> - idź do tyłu o daną liczbę pixeli</li>
+          <li><code>rt [liczba]</code> - obrót w prawo o daną liczbę stopni</li>
+          <li><code>lt [liczba]</code> - obrót w lewo o daną liczbę stopni</li>
+          <li><code>pu</code> - podnieś pędzel</li>
+          <li><code>pd</code> - upuść pędzel</li>
+          <li><code>LW [liczba]</code> - ustaw szerokość pędzla na <code>liczba</code> pixeli</li>
+          <li><code>ss [kolor]</code> - ustaw kolor pędzla nadany kolor(HEX)</li>
+          <li><code>koch [stopień][szerokość]</code> - stwórz płatek Kocha danego stopnia < 5 </li>
+          <li><code>sierp [stopień][szerokość]</code> - stwórz dywan sierpińskiego danego stopnia</li>
+          <li><code>repeat [liczba][komenda]</code> - wykonaj komendę <code>komenda</code> daną liczbę razy</li>
+        </ul>
+        <b>Zasady działania</b>: 
+        <ul>
+            <li>w <code>app.js</code> znajduje się program z klasą <code>Turtle</code></li>
+            <li><code>Turtle</code> ma za zadanie parsowanie inputu oraz na jego podstawie wywołanie odpowiednich komend rysujących na canvasie.</li>
+            <li><code>Turtle</code> bierze jako parametr obiekt canvas i na nim działa.</li>
+            <li>Wszystkie klasy w <code>Turtle</code> są opisane w kodzie.</li>
+        </ul>
+      </p>
+      <h2 class="last-commands">Ostatnie komendy</h2>
+      <ul class="commands"></ul>
+    </section>
+  </body>
+</html>

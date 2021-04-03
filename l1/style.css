@@ -14,7 +14,7 @@ main {
 .commands_section { 
     margin-left: 1rem;
 }
-.canvas { 
+canvas { 
     border: 2px solid black; 
     margin-bottom: 1rem;
     margin-right: 1rem;

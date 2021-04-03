@@ -1,10 +1,11 @@
-const canvas = document.querySelector(".canvas");
+const canv = document.querySelector(".canvas");
 const canvas_pen = document.querySelector(".canvas__pen");
 const btn = document.querySelector(".form__button");
 const input = document.querySelector(".form__input");
 const lastCommands = document.querySelector(".commands");
 const positionText = document.querySelector(".canvas__pos");
 const angleText = document.querySelector(".canvas__angle");
+
 
 class Turtle {
   constructor(canvas) {
@@ -194,7 +195,7 @@ class Turtle {
   }
 }
 
-const turtle = new Turtle(canvas);
+const turtle = new Turtle(canv);
 btn.addEventListener("click", () => {
   turtle.parseInput(input.value);
   const el = document.createElement("li");
@@ -202,3 +203,4 @@ btn.addEventListener("click", () => {
   lastCommands.appendChild(el);
   input.value = "";
 });
+
