@@ -92,30 +92,23 @@ class Turtle {
     }
   }
 
-  sierpinski(level, lenght) {
-    const half = parseInt(lenght / 2);
-    console.log(half);
-    if (level == 0) {
-      for (let i = 0; i < 3; i++) {
-        this.forward(lenght);
-        this.rotateLeft(120);
-      }
+  triangle(length) {
+    for(let i = 0; i < 3; i++) {
+      this.forward(length); 
+      this.rotateRight(120); 
     }
-    else {
-        this.sierpinski(level-1, half);
-        this.forward(half);
-        this.sierpinski(level-1, half);
-        this.forward(half);
-        this.rotateLeft(120);
-        this.forward(half);
-        this.rotateLeft(120);
-        this.forward(half);
-        this.rotateLeft(120);
-        this.sierpinski(level-1, half);
-        this.rotateRight(120);
-        this.forward(half);
-        this.rotateLeft(120);
-    }
+  }
+  sierpinski(level, length) {
+        if(level == 0) {
+          this.triangle(length); 
+        }
+        else { 
+          for(let i =0; i < 3; i++) {
+            this.sierpinski(level-1, length/2); 
+            this.forward(length);
+            this.rotateRight(120); 
+          }
+        }
   }
 
   executeCommand(command, ...params) {
@@ -163,6 +156,12 @@ class Turtle {
           this.koch(params[0], params[1]);
           this.rotateRight(120);
         }
+        break; 
+      }
+
+      case "SIERP": { 
+        this.sierpinski(params[0], params[1]);
+        break; 
       }
       case "REPEAT": {
         for (let i = 0; i < params[0]; i++) {
@@ -203,4 +202,3 @@ btn.addEventListener("click", () => {
   lastCommands.appendChild(el);
   input.value = "";
 });
-
