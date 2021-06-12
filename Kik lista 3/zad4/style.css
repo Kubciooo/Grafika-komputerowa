@@ -1,0 +1,29 @@
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    gap: 1rem;
+}
+
+form {
+    font-size: 2rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem; 
+    align-items: flex-start;
+
+}
+
+input {
+    font-size: 2rem;
+}
+
+canvas { 
+    border: 2px solid black;
+}

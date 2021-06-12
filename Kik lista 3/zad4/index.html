@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Paweł Kubala lista 3 zad 2, zad 3</title>
+</head>
+
+<body>
+    <h1>Paweł Kubala zadania 2,3</h1>
+    <form>
+        <label for="input_function">
+            Podaj funkcję <span>Uwaga! W celu korzystania z funkcji typu sinus musimy dać <code>
+                Math.sin()
+            </code>, np. <code>Math.sin(x*y)</code></span>
+        </label>
+        <input type="text" id="input_function" value="x**2 + y**2">
+        <label for="input_xFrom">Zakres <code>x</code> od:</label>
+        <input type="number" id="input_xFrom" value="-1">
+        <label for="input_xTo">Zakres <code>x</code> do:</label>
+        <input type="number" id="input_xTo" value="1">
+        <label for="input_yFrom">Zakres <code>y</code> od:</label>
+        <input type="number" id="input_yFrom" value="-1">
+        <label for="input_yTo">Zakres <code>y</code> do:</label>
+        <input type="number" id="input_yTo" value="1">
+        <button>Oblicz</button>
+    </form>
+    <main id="main_container">
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </main>
+</body>
+<script src="scripts/graph.js" type="module" defer></script>
+
+</html>
